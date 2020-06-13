@@ -1,0 +1,46 @@
+---- Download Git Bash and Cmder
+
+~ how to intregate Git with Cmder ~
+first add a new task and add this command -> "%ProgramFiles%\Git\bin\sh.exe" --login -i - -new_console:d:%USERPROFILE%
+
+~ how to initializate integrated server with php ~
+    $ php -S localhost:8000 -t public public/index.php
+    
+---- Install php version 7+ and add PHP to environment variables
+---- Install Composer to manage the application
+---- Install mysql server
+---- Install phinx to manage migrations of the database -> composer require robmorgan/phinx.0.7.1
+    > how to execute migration's generate
+        -> vendor\bin\phinx create CreateNameTest
+        -> vendor\bin\phinx create migrate
+        -> Reset database: vendor\bin\phinx rollback -t=0
+        -> vendor\bin\phinx seed:create NameExampleSeeder
+        -> Execute all seeders: vendor\bin\phinx seed:run
+        OBS: Use "php migrate-seed.php" to execute all commands, this has archive located on root of the project
+        and have all commands written in order and prevent errors during seeds input on database. 
+
+---- Install Faker, this library will generate fake data to input into database during development time
+    $ composer require fzaninotto/faker:1.6.0 --dev
+---- Install Pimple,  this library is a dependency injection container
+    $ composer require xtreamwayz/pimple-container-interop
+---- Install Aura Router to manage our routes 
+    $ composer require aura/router:3.1.0
+---- Install Zend-diactoros library
+    $ composer require zendframework/zend-diactoros:1.3.10
+---- Install template engine named Twig 
+    $ composer require twig/twig:~1.33.0
+---- Install Eloquente, this library work with the data persistence and help us to create our models
+    $ composer require illuminate/database:5.4.13
+---- Install jasny/auth to authentication, authorization and access control for PHP
+    $ composer require jasny/auth:1.0.1
+---- Use Google Charts API to create graphics in javascript and show the results to the users
+---- Install phpdotenv to load environment variables from your own operating system, you doing it at the time you going to deploy it to some host server
+    $ composer require vlucas/phpdotenv:2.4
+---- Install PHPSniffer to detect violations of a defined set of coding standards
+    $ composer require "squizlabs/php_codesniffer:*" --dev
+        > vendor\bin\phpcs folder - Verificar possíveis erros
+        > vendor\bin\phpcbf folder - Corrigir erros e avisos
+        > vendor\bin\phpcs --report=summary folder - Criar um relatório
+---- Install Heroku service to deploy your application to   hospedation from it
+        > heroku create : create new application
+        > Create a new file named 'Procfile'
