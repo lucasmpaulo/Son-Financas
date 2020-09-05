@@ -1,0 +1,2 @@
+# Son-Financas
+O projeto foi desenvolvido através de um curso da School of Net que consiste no desenvolvimento de um gerenciador de finanças pessoais utilizando o PHP 7.1 orientado a objetos. Aplicando conceitos de Orientação a Objetos, Injeção de dependências, Solid, padrão de arquitetura MVC, controle de rotas, Template Engine, Composer, PHP CodeSniffer e no final foi realizado o deploy no servidor de hospedagem Heroku.
